@@ -1,17 +1,73 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import {useState} from 'react';
+import Gift from './Gift';
+import WriteNote from './WriteNote';
+import Pnf from './logo.png';
+import "./MainStyle.css"
+import 'bootstrap/dist/css/bootstrap.min.css';
+import {Container,Row,Col} from 'react-bootstrap';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+function PNF() {
+ const [sectionContent,setContent] = useState(()=> {
+   return <Gift/>
+ })  
+
+ const [leftLink,setLeft] = useState(()=> {
+  return <a href="">Back to cart</a>
+})  
+
+const [rightLink,setRight] = useState(()=> {
+  return <a href="">Proceed to write a note</a>
+})  
+ 
+const setLinks = () => {
+  setLeft(<a href="">Back to shipping information</a>)
+  setRight(<a href="">Proceed to billing information</a>)
+}
+  const setNote = () => {
+  setContent(<WriteNote/>)
+}
+
+return (
+  <>
+  <Row>
+    <Col md = {10}> </Col>
+   <Col md = {2}><div><img src = {Pnf}/> </div> </Col>
+   </Row>
+
+  <Container>
+  <div>  
+    <Row>
+      <Col md = {6}>
+    <div id = "leftL">{leftLink} </div>
+    </Col>
+    <Col md = {6}>
+   <div id = "rightL"> {rightLink} </div>
+   </Col>
+   </Row>
+  </div>
+  
+  <Container id = "contentArea">
+  <h1>Checkout</h1>
+  
+ 
+  <div id = "formContent"> {sectionContent} </div>
+  <Row>
+    <Col md = {7}> </Col>
+    <Col md = {5}> 
+  <button type = "button" onClick = {() => {
+    setNote();
+    setLinks();
+  }}> Proceed to next step </button>
+  </Col>
+  </Row>
+  </Container>
+  </Container>
+  </>
+)
+
+}
+
+ReactDOM.render(<PNF />, document.getElementById('root'));

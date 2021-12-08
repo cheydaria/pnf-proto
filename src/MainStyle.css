@@ -1,0 +1,46 @@
+*{
+    font-family: Helvetica;
+}
+
+a {
+    font-size: 14pt;
+    color: gray;
+}
+
+h1 {
+text-align: center;
+}
+
+p, label {
+    font-size: 16pt;
+}
+
+#rightL {
+        display: block;
+        text-align: right;
+}
+
+#formContent {
+    margin-top: 2%;
+    margin-left: 20%;
+}
+
+.normField, .selectNorm {
+    max-width: 230px;
+}
+
+#strtAdd, #bigTxt {
+    max-width: 750px;
+}
+
+button {
+    border-style: none;
+    background-color: #2E634D;
+    width: 250px;
+    padding: 15px 5px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    color: white;
+    font-size: 22px;
+    display: block;
+}
