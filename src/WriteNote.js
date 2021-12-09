@@ -2,7 +2,7 @@ import React from 'react';
 import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col,Form} from 'react-bootstrap';
-import './WriteNoteStyle.css'
+
 
 
 function WriteNote() {
