@@ -10,10 +10,12 @@ import {Container,Row,Col} from 'react-bootstrap';
 
 
 function PNF() {
+  //the dynamic form area 
  const [sectionContent,setContent] = useState(()=> {
    return <Gift/>
  })  
 
+ //the top links for navigating forward and backward
  const [leftLink,setLeft] = useState(()=> {
   return <a href="">Back to cart</a>
 })  

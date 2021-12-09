@@ -4,12 +4,14 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col,Form} from 'react-bootstrap';
 
 function Gift() {
+  //track the checkbox state
     const [checked, setIsChecked] = useState(false);
-      
+    //toggle the checkbox state  
     const handleOnChange = () => {
       setIsChecked(!checked);
     };
     
+    //contains the form for shipping to recipient 
       function ShipInfo()
       {
         return(

@@ -6,18 +6,21 @@ import './WriteNoteStyle.css'
 
 
 function WriteNote() {
+  //keeps track of checkbox state
     const [checked, setIsChecked] = useState(false);
-      
+   
+    //toggles the checkbox state
     const handleOnChange = () => {
       setIsChecked(!checked);
     };
 
+    //the form
     function NoteInfo()
       {
         return(
         <>
         <Row>
-          <Col>
+          <Col> //the text area for writing the note 
         <Form.Control as="textarea" rows={3} id = "bigTxt" />
          </Col>
           </Row>
@@ -31,7 +34,7 @@ function WriteNote() {
           <p>Would you like to write a note to go with your flowers? </p>
           <input type="checkbox" checked = {checked} onChange={handleOnChange}/>
                 <label>Yes</label>
-             
+            
                {checked && ( <div>
                   <NoteInfo/>
                 </div>)
