@@ -19,7 +19,7 @@ function Gift() {
         <Row>
         <Col md = {6}>
         <label>
-        Yes
+        First name
         </label> 
         <br/>
         <Form.Control size = "lg" type="text" className = "normField"/>

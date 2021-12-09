@@ -3,8 +3,6 @@ import { useState } from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
 import {Row,Col,Form} from 'react-bootstrap';
 
-
-
 function WriteNote() {
   //keeps track of checkbox state
     const [checked, setIsChecked] = useState(false);
@@ -20,7 +18,10 @@ function WriteNote() {
         return(
         <>
         <Row>
-          <Col> //the text area for writing the note 
+          <p>Please write your note below. Don’t forget to include your name:</p>
+        </Row>
+        <Row>
+          <Col> 
         <Form.Control as="textarea" rows={3} id = "bigTxt" />
          </Col>
           </Row>
